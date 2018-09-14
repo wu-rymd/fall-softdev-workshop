@@ -1,4 +1,4 @@
-# Theodore Peters, Raymond Wu (iDoKnow)
+# Theodore Peters, Raymond Wu (DidacticKatydids)
 # SoftDev1 pd7
 # K6 -- StI/O: Divine your Destiny!
 # 2018-09-14

@@ -20,10 +20,12 @@ def csvToDict():
         if record[0] == "Job Class" or record[0] == "Total":  
             continue  # skip the first and last records
         
-        # record[0] is the occupation string, record[1] is the floating point (as a string)
+        # record[0] is occupation string, record[1] is floating point (as a string), record[2] is link
         # must convert the appropriate string into floating point before placing as value in dict
         else:
-            occupations[ record[0] ] = float(record[1])
+            occupations[ record[0] ] = { "percent" : float( record[1] ),
+                                         "link"    : record[2],
+                                       }
             
     csvFileObject.close()
     return occupations

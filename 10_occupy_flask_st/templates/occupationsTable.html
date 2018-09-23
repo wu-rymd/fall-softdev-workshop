@@ -15,12 +15,14 @@
       <tr>
 	<th>Name</th>
 	<th>Percentage</th>
+	<th>Link</th>
       </tr>
 
       {% for occupation in occupations %}
       <tr>
-	<td>{{ occupation }}</td>               <!-- occupation string -->
-	<td>{{ occupations[occupation] }}</td>  <!-- dict value of entry w/ key [occupation string] -->
+	<td>{{ occupation }}</td> 
+	<td>{{ occupations[occupation]["percent"] }}</td>
+	<td><a href="{{ occupations[occupation]['link'] }}">Link</a></td> 
       </tr>
 
       {% endfor %}

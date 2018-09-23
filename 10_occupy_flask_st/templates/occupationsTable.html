@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Occupations </title>
+  </head>
+
+  <body>
+
+    <h2> Information about occupations in the United States (courtesy of Mr. Brooks) </h2>
+
+    <h3> Random occupation: {{ randomOccupation }} </h3>
+    
+    <table border="1">
+
+      <tr>
+	<th>Name</th>
+	<th>Percentage</th>
+      </tr>
+
+      {% for occupation in occupations %}
+      <tr>
+	<td>{{ occupation }}</td>               <!-- occupation string -->
+	<td>{{ occupations[occupation] }}</td>  <!-- dict value of entry w/ key [occupation string] -->
+      </tr>
+
+      {% endfor %}
+
+    </table>
+
+  </body>
+</html>

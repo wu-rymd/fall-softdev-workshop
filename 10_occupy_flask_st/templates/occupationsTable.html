@@ -2,27 +2,30 @@
 <html>
   <head>
     <title> Occupations </title>
+    <style>
+      a {
+      color: blue;
+      }
+    </style>
   </head>
 
   <body>
 
     <h2> Information about occupations in the United States (courtesy of Mr. Brooks) </h2>
 
-    <h3> Random occupation: {{ randomOccupation }} </h3>
+    <h3> Random occupation: <a href="{{ occupations[randomOccupation]['link'] }}">{{ randomOccupation }}</a> </h3>
     
     <table border="1">
 
       <tr>
 	<th>Name</th>
 	<th>Percentage</th>
-	<th>Link</th>
       </tr>
 
       {% for occupation in occupations %}
       <tr>
-	<td>{{ occupation }}</td> 
+	<td><a href="{{ occupations[occupation]['link'] }}">{{ occupation }}</a></td> 
 	<td>{{ occupations[occupation]["percent"] }}</td>
-	<td><a href="{{ occupations[occupation]['link'] }}">Link</a></td> 
       </tr>
 
       {% endfor %}

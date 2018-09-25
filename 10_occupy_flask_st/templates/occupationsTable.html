@@ -13,7 +13,9 @@
 
     <h2> Information about occupations in the United States (courtesy of Mr. Brooks) </h2>
 
-    <h3> Random occupation: <a href="{{ occupations[randomOccupation]['link'] }}">{{ randomOccupation }}</a> </h3>
+    <!-- elem 0 in the value (list) of an occupation is the percentage -->
+    <!-- elem 1 in the value (list) of an occupation is the link -->
+    <h3> Random occupation: <a href="{{ occupations[randomOccupation][1] }}">{{ randomOccupation }}</a> </h3>
     
     <table border="1">
 
@@ -24,8 +26,8 @@
 
       {% for occupation in occupations %}
       <tr>
-	<td><a href="{{ occupations[occupation]['link'] }}">{{ occupation }}</a></td> 
-	<td>{{ occupations[occupation]["percent"] }}</td>
+	<td><a href="{{ occupations[occupation][1] }}">{{ occupation }}</a></td> 
+	<td>{{ occupations[occupation][0] }}</td>
       </tr>
 
       {% endfor %}

@@ -23,21 +23,20 @@ def csvToDict():
         
         # record[0] is occupation string, record[1] is floating point (as a string), record[2] is link
         # must convert the appropriate string into floating point before placing as value in dict
+        # occupation : [ <percentage> , <link> ]
         else:
-            occupations[ record[0] ] = { "percent" : float( record[1] ),
-                                         "link"    : record[2],
-                                       }
+            occupations[ record[0] ] = [ float( record[1] ) , record[2] ]
             
     csvFileObject.close()
 
 #  PRECONDITION: occupations dict cannot be empty (csvToDict must have ran first)
 # POSTCONDITION: weights list is populated w/ weighted percentages of randomness
 def dictWeights():
-    listValues = list(occupations.values()) # list containing values in dictionary
-    # the values themselves are dictionaries of the form {'percent': <#.#> , 'link': "..."}
+    listValues = list(occupations.values()) # list containing a list of the values in occupations dict
+    # the values themselves are lists of the form [ <percentage> , <link> ]
 
-    for dictionary in listValues:             # for each value in occupations dictionary
-        weights.append(dictionary['percent']) # put the percentage in list weights
+    for listOfOccupationData in listValues:             # for each value in current list of occupation data
+        weights.append( listOfOccupationData[0] )       # put the percentage in list of weights
 
 # these accessor methods are necessary b/c
 # it doesn't make sense to keep reading the csv file & re-populate the occupations dict

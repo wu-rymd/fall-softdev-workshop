@@ -4,7 +4,7 @@
 # 2018-10-02
 
 from flask import Flask, redirect, render_template, request, session, url_for, flash
-from util import tools
+import util.tools as tools
 
 app = Flask(__name__)
 app.secret_key = tools.generate_random_secretkey()

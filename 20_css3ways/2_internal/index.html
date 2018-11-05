@@ -4,23 +4,97 @@
 <html>
   <head>
     <title>foo title</title>
+    <style>
+      body {
+          background-color: grey;
+      }
+
+      #container {
+          background-color: darkgrey;
+      }
+
+      #heading {
+          background-color: lightgrey;
+          color: white;
+          text-align: center;
+      }
+
+      #navbar {
+          display: inline-block;
+          padding-left: 15px;
+          padding-right: 30px;
+          float: left;
+      }
+
+
+      /* targeting all list items in unordered list under id="navbar" */
+      #navbar > ul {
+          list-style: none; /* no bullets */
+          padding-left: 0;  /* no indent */
+      }
+
+      a {
+          color: white;
+          text-decoration: none;
+          text-align: left;
+      }
+
+      #body {
+          display: inline;
+          vertical-align: top;
+      }
+
+      #footer {
+          background-color: dimgrey;
+          color: darkgrey;
+          text-align: right;
+      }
+
+    </style>
+    
   </head>
 
   <body>
-    <h1>foo heading 1</h1>
-    <h3>nav foo</h3>
-    <ul>
-      <li><a href="">dis</a></li>
-      <li><a href="">dat</a></li>
-      <li><a href="">de udda ting</a></li>
-    </ul>
-    <h2>main foo heading</h2>
-    <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk 
 
-      <br>
-      <br>
+    <div id="container">
+      
+      <div id="heading">
+        <h1>foo heading 1</h1>
+      </div>
 
-      Copyright &copy; 2016 Clyde "Thluffy" Sinclair
+      <div id="content">
+        
+        <div id="navbar">
+          <h3>nav foo</h3>
+          <ul>
+            <li><a href="">dis</a></li>
+            <li><a href="">dat</a></li>
+            <li><a href="">de udda ting</a></li>
+          </ul>
+        </div>
+
+
+        <div id="body">
+          <h2>main foo heading</h2>
+          
+          <p>
+            <!-- http://www.cupcakeipsum.com --> 	Macaroon bear claw bonbon. Sweet topping chocolate cake tootsie roll sweet toffee biscuit brownie jelly-o.	
+	        Pudding pastry dragée danish. Bonbon cookie chupa chups cotton candy macaroon jelly beans pie.
+	        Topping chocolate bear claw brownie powder. Gummies bonbon carrot cake chocolate bar brownie fruitcake soufflé gingerbread.
+	        Chocolate gingerbread apple pie fruitcake oat cake. Sweet roll brownie lemon drops.
+          </p>
+        </div>
+
+        <br>
+        <br>
+
+      </div> <!-- end content -->
+      
+      <div id="footer">
+        Copyright &copy; 2016 Clyde "Thluffy" Sinclair
+      </div>
+
+    </div> <!-- end container -->
 
   </body>
 

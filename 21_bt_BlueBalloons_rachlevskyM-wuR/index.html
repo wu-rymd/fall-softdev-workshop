@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<!--
+Mai Rachelsky, Raymond Wu (Team BlueBalloons)
+SoftDev1 pd7
+K21 -- Who Does Frame Work For?
+2018-11-07
+-->
+
+<html>
+  <head>
+    <title> My Foist Bootstrap Page </title>
+    <link rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  
+  <!-- Navbar -->
+  <!-- https://getbootstrap.com/docs/4.0/components/navbar/ -->
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <br>
+
+
+  <!-- Alerts -->
+  <!-- https://getbootstrap.com/docs/4.0/components/alerts/ -->
+  
+  <div class="alert alert-warning" style="padding: 25px;">
+  <p><strong>Another feature is the clean Navbar. Again, another feature that has been widely used on the intertubes.</strong></p>
+  <p>Bacon ipsum dolor amet porchetta tri-tip cow pork landjaeger. Turducken pig spare ribs, biltong filet mignon pork chop ham hock. Kevin andouille short ribs, biltong sausage shankle ball tip ham pig kielbasa. Short loin tri-tip tongue corned beef andouille. Buffalo beef pork fatback. Boudin salami brisket meatloaf kevin.</p>
+  </div>
+  
+  <!-- Jumbotron -->
+  <!-- https://getbootstrap.com/docs/4.0/components/jumbotron/ -->
+  
+  <div class="jumbotron">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is <em>my foist Bootstrap webpage</em> for Software Development.</p>
+    <hr>
+    <div class="alert alert-warning">
+      <p><strong>One of its key features is a clean and versatile way to show content that can be applied to different types of websites. You may have noticed similar styling used on Talos.</strong></p>
+      <p>Bacon ipsum dolor amet porchetta tri-tip cow pork landjaeger. Turducken pig spare ribs, biltong filet mignon pork chop ham hock. Kevin andouille short ribs, biltong sausage shankle ball tip ham pig kielbasa. Short loin tri-tip tongue corned beef andouille. Buffalo beef pork fatback. Boudin salami brisket meatloaf kevin.</p>
+    </div>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+  <!-- Forms -->
+  <!-- https://getbootstrap.com/docs/4.0/components/forms/ -->
+
+  <div style="padding: 25px;">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Example multiple select</label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <form>
+        <div class="form-group">
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+      </form>
+      <input class="form-control" type="text" placeholder="Readonly input here…" readonly> <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <div class="alert alert-warning" style="padding: 25px;">
+  <p><strong>Yet another feature is its clean and interactive forms that allow for a lot of customization. You can include form elements like fields where you can select multiple options, upload files, and have fields that cannot be edited.</strong></p>
+  <p>Bacon ipsum dolor amet porchetta tri-tip cow pork landjaeger. Turducken pig spare ribs, biltong filet mignon pork chop ham hock. Kevin andouille short ribs, biltong sausage shankle ball tip ham pig kielbasa. Short loin tri-tip tongue corned beef andouille. Buffalo beef pork fatback. Boudin salami brisket meatloaf kevin.</p>
+  </div>
+
+  <hr>
+  
+  <footer>
+    <p><em>Team BlueBalloons</em></p>
+  </footer>
+  
+
+  <script>
+    console.log("Uncaught TypeError: Cannot read property 'fn' of undefined\n\nThis is because jQuery hasn't been loaded/included.\nNecessary for K #21?");
+  </script>
+  
+</body>
+</html>

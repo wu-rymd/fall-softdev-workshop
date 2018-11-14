@@ -10,7 +10,7 @@ import json
 app = Flask(__name__)
 
 # do this once and once only!
-u = urllib.urlopen("https://api.nasa.gov/planetary/earth/imagery/?lon=100.75&lat=1.5&date=2014-02-01&cloud_score=True&api_key=F6TDwiEwmUJItcVH4X9NYeooLACkUVDnXsyeqGhL")
+u = urllib.request.urlopen("https://api.nasa.gov/planetary/earth/imagery/?lon=100.75&lat=1.5&date=2014-02-01&cloud_score=True&api_key=F6TDwiEwmUJItcVH4X9NYeooLACkUVDnXsyeqGhL") # do I want to put an API key on GitHub?
 response = u.read()
 data = json.loads(response)
 imgSrc = data['url']

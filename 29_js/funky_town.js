@@ -12,16 +12,11 @@ var fibonacci = (n) =>{
         return fibonacci(n-1) + fibonacci(n-2);
 };
 
-var gcd = (n,d) =>{
-    var x,a,b;
-    a = n;
-    b = d;
-    while(a%b != 0){
-        x = a;
-        a = b;
-        b = x%b;
-    };
-    return b;
+var gcd = (a,b) =>{
+    if (a%b == 0)
+        return b;
+    else
+        return gcd(b, a%b);
 
 };
 

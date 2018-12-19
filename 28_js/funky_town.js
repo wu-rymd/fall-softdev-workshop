@@ -1,3 +1,8 @@
+// Peter Cwalina, Raymond Wu (team PCRW)
+// SoftDev1 pd7
+// K28 -- Sequential Progression
+// 2018-12-19
+
 var fibonacci = (n) =>{
     if (n<=0)
         return 0;
